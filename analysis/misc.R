@@ -35,3 +35,7 @@ sitting_days <- sitting_days %>%
   ) %>%
   select(-startdate, -enddate)
 
+sitting_days %>%
+  group_by(wday) %>%
+  skim(year, month, count)
+
